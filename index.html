@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+        <div>
+          <h1>PRIN134 Final Exam</h1>
+          <h5>Create a To Do application with the following functions:</h5>
+        </div>
+        <ul>
+          <li> (10Pts) Can add "to do" items. To do items will consists of a Title and Details.</li>
+          <li> (10Pts) Created "to do" items should be displayed under "To Do Items" section</li>
+          <li> (10Pts) Can process the "to do" items using "First In and First Out" or "First In Last Out" approach.</li>
+          <li> (10Pts) Processed "to do" items should be displayed under "Done Items" section and removed in "To Do Items" section</li>
+          <li> (10Pts) A reset button that will remove all items in "To Do Items" and "Done Items" sections.</li>
+           <li> (20Pts) Bonus for Layout</li>
+        </ul>
+        
+        <h1>Create a To Do Item</h1>
+        <form action="">
+                            <div class="mb-3">
+                              <label for="title" class="form-label">Title</label>
+                              <input type="text" class="form-control" id="txtitle" placeholder="Enter title">
+                            </div>
+                            <div class="mb-3">
+                              <label for="details" class="form-label">Details</label>
+                              <textarea class="form-control glass-textarea" id="txdetails" rows="3" placeholder="Enter details..."></textarea>
+                            </div>
+                            <button type="button" class="btn btn-info" id="btnAdd" onclick="add()">Add</button>
+                            <button type="button" class="btn btn-info" id="btnClear" onclick="clear()">Clear</button>
+                          </form>
+                    </div>
+                </div>
+                    <div class="row row-cols-1 row-cols-md-1 mb-4">
+                        <div class="col">
+                            <h3>Processing</h3>
+                            <p>Select a process for to do processing.</p>
+                            <div class="d-inline">
+                                <button class="btn btn-info" type="button" id="btnFIFO" onclick="fifo()">First In First Out</button>
+                            </div>
+                            <div class="d-inline">
+                                <button class="btn btn-info" type="button" id="btnFILO" onclick="filo()">First In Last Out</button>
+                            </div>
+                            <div class="d-inline">
+                                <button class="btn btn-info" type="button" id="btnReset" onclick="reset()">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                  <div class="row">
+                    <div class="col">
+                      <h3>To Do Items</h3>
+                      <div id="todo_cont" class="row row-cols-1 row-cols-md-3 g-4">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <h3>Done Items</h3>
+                      <div id="donecont" class="row row-cols-1 row-cols-md-3 g-4">
+                      </div>
+                    </div>
+                  </div>
+            
+  
+  
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
